@@ -49,6 +49,7 @@
 	git commit -am "描述"  //如果这个文件是版本库里的文件可以用-am提交
 	git pull origin dev   //拉取origin库里的dev分支
 	git fetch origin dev  //只更新origin库中的dev分支，但不进行合并
+	//用fetch确实代码没问题后用 git merge origin dev 合并远程的dev分支
 
 	可以在别人的仓库Fork一份到自己的仓库，修改后点Pull requests通知那个用户，
 	Pull requests一定是复制别人项目的时候才会存在pull requests
