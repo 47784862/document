@@ -1,0 +1,137 @@
+基础
+	git help 帮助
+	git --version  查看git版本
+	git config:
+		git config --global user.name ***
+		git config --global user.email ***
+		git config --unset --global user.name  修改用户名
+		git config --list
+	ls -al 查看目录所以文件
+	git config --global alias.ci commit  //设置commit别名为ci
+
+	git init   关联地址
+	git status   查看状态
+	git add index.html     添加文件到暂存区
+	git commit    提交   && git commit -m "add style.css"
+	git log  查看提交日志   && git log --oneline
+	git mv my.js main.js    修改add后的文件名
+	git rm main.js     删除文件(包括本地文件)
+	git rm --cached test.js   把文件从暂存区删除  && git rm -f test.js  从暂存区与本地都删除
+	git revert HEAD  回到上一个版本
+	git revert HEAD^^ 回撤两个版本 
+	git revert HEAD~2 回撤到上两个版本
+	git reset^ --sort  撤回到上个版本，存到暂存区
+	git reset^ --mixed 撤回到上个版本，并且不被跟踪
+	git reset^ --hard 撤回所以
+	git reset^ cc0fa7e（版本号）撤回到这个版本号
+	git branch  查看当前分支
+	git branch dev（分支名称）  创建dev分支
+	git checkout dev   切换到dev分支
+分支
+	git merge dev  //在当前分支中合并dev分支
+	git merge dev --no-ff -m "merge dev --no-ff"  //合并dev分支，禁用快进的方式
+	git checkout -b bug_001 //创建bug_001分支，并切换到这个分支
+	git checkout -b dev origin/dev  //在本地创建一个dev分支，并将它关联到网上的origin/dev分支中
+	git diff      //查看修改过的文件哪里不一样
+	git branch -d dev   //删除dev分支
+	git branch -m dev2 dev  //第一个参数是旧的分支名dev2，第二个参数是新的分支名dev
+	git branch -r   //查看本地与远程的对应关系
+	git branch -a   //查看远程分支
+	git stash  //封存当前分支的文件
+	git stash pop //解除封存文件
+	git stash list  //显示封存的列表
+
+	git remote add origin https:版本库网址  //关联远程地址
+	git remote remove origin  //取消关联远程版本库
+	git clone 加git地址  //克隆git仓库项目
+	git push -u origin dev  //将dev分支推送到远程
+	git remote -v   //查看关联远程版本库
+	git commit -am "描述"  //如果这个文件是版本库里的文件可以用-am提交
+	git pull origin dev   //拉取origin库里的dev分支
+	git fetch origin dev  //只更新origin库中的dev分支，但不进行合并
+
+	可以在别人的仓库Fork一份到自己的仓库，修改后点Pull requests通知那个用户，
+	Pull requests一定是复制别人项目的时候才会存在pull requests
+	如果修改的项目没有错误就可以点击Create pull request 创建pull request
+	
+Git 与 GitHub-git服务器搭建
+	
+	git init --bare test.git  //初始化git仓库
+	git remote add origin ssh://root@192.168.0.104/opt/git/test.git  //在本地关联192.168.0.104服务器，origin是名字
+	git push -u origin master  //第一次push要加-u,push到origin仓库的master分支
+
+
+
+实例
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

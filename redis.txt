@@ -1,0 +1,71 @@
+1、redis安装
+	cd /usr/local/src
+	wget http://download.redis.io/releases/redis-2.8.3.tar.gz
+	tar zxvf redis-2.8.3.tar.gz
+	cd redis-2.8.3
+	make
+	make PREFIX=/usr/local/redis install
+
+cp配置文件
+	cp /usr/local/src/redis-2.8.3/redis.conf  ./
+
+启动redis服务端
+	./bin/redis-server ./redis.conf   //执行redis-server文件 并读取redis.conf配置文件
+
+让redis以后台进程的形式运行：
+	编辑redis.conf配置文件，修改如下内容：
+	daemonize on 修成：daemonize yes
+	查看redis进程：
+		ps aux|grep redis
+
+启动redis客户端
+	./bin/redis-cli
+
+key操作命令
+	SET yiibai redis EX 60 NX  //60秒过期时间
+	keys *   //查询所有key
+	RANDOMKEY  //返回随机输入key
+	type key(key键)  //查看这个key的值类型
+	exists key   //判断key是否存在,返回1/0
+	del key   //删除一个key
+	rename key newkey  //修改名称，出现重名会被覆盖
+	renamenx key newkey  //修改名称，出现重名则修改失败
+	select 0-16  //用select切换16个数据库
+	move sea 1  //把键值sea移到1号数据库
+	ttl key   //查询key生命周期，存在返回剩于秒数，返回-1永久有效，-2是不存在的key
+	expire key 10//设置生命周期，设置key生命周期为10秒
+	persist key  //设置key永久有效
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
