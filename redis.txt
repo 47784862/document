@@ -22,7 +22,13 @@ cp配置文件
 	./bin/redis-cli
 
 key操作命令
-	SET yiibai redis EX 60 NX  //60秒过期时间
+
+最大的字符串为512M
+
+	set yiibai redis ex 60 NX  //60秒过期时间
+	mset key val key val key val //一次设置多个key
+	get key  //输入key的值 
+	mget key key key   //输入多个key
 	keys *   //查询所有key
 	RANDOMKEY  //返回随机输入key
 	type key(key键)  //查看这个key的值类型
@@ -35,9 +41,28 @@ key操作命令
 	ttl key   //查询key生命周期，存在返回剩于秒数，返回-1永久有效，-2是不存在的key
 	expire key 10//设置生命周期，设置key生命周期为10秒
 	persist key  //设置key永久有效
+	setrange work 2 ??  //work的值偏移2个字符
+	append key @@  //在key后追加两个@
+	getrange key 1 5  //获取key1到4字符
+	getset key wakeup  //返回当前key值，并设置新key值为wakeup
+	decr num   //在数字num上减1
+	incr num   //在数字num上加1
+	incrby age 5 //在数字age上加5
 
-
+list结构及命令
 	
+	lpush key a   //在链表左侧
+	rpush key b   //把b放在链表右侧
+	lrange key 0 3  //查看链表0到3的元素
+	lpop key   //输出左边第一个元素，并删除这个元素
+	rpop key   //输出右边第一个元素，并删除这个元素
+	lrem key 2 b  //删除链表中2个为b的值
+	ltrim key 2 5  //截取保留链表中3-5的值
+	lindex key 0   //返回index索引上的值,
+	llen key  //返回索引长度
+	linsert num before 3 2  //在数字值为3的前面加入数字2
+	linsert num after 6 7   //在数字6的后面加入数字7
+	rpoplpush task job     //把task表最右边的值弹出放到job表的左边
 
 
 
