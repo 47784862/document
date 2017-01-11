@@ -74,10 +74,35 @@ set 集合
 	srandmember key   //作用: 返回集合key中,随机的1个元素.
 	scard key    // 返回集合中元素的个数
 
+order set 有序集合：
+	
+	zadd key score1 value1 score2 value2   //key  排序号 值
+	zremrangebyscore key min max
+
+Hash 哈希数据类型：
+
+	hset key field value  
+	hget key field    //查看单个
+	hgetall key       //查看全部
+	hmset key field1 value1 [field2 value2 field3 value3 ......fieldn valuen]  //设置多个
+	hdel key field    //删除
+	hkeys key    //返回key中所有的field
+	kvals key    //返回key中所有的value
 
 
+redis事务及锁：
+	
+	watch key key key ……  //监视这个key，任意一个key有变，事务就取消了
+	unwatch   // 取消所有watch监听
+	multi    //开启事务
+	exec     //提交
+	discard  //取消
 
+频道发布与消息订阅:
 
+	publish news 'today is sunshine'   //发布一个new的新闻频道
+	subscribe news     //监听news频道
+	
 
 
 
