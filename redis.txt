@@ -87,7 +87,7 @@ Hash 哈希数据类型：
 	hmset key field1 value1 [field2 value2 field3 value3 ......fieldn valuen]  //设置多个
 	hdel key field    //删除
 	hkeys key    //返回key中所有的field
-	kvals key    //返回key中所有的value
+	hvals key    //返回key中所有的value
 
 
 redis事务及锁：
@@ -116,10 +116,10 @@ redis事务及锁：
 
 
 
+http://192.168.1.152:86/admin.php/Index/index.html
 
 
-
-
+18686429978
 
 
 
