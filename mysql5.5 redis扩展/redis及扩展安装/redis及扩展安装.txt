@@ -1,0 +1,155 @@
+下载安装：redis-2.8.2.20.tar.gx
+
+#tar xzf redis-2.8.20.tar.gz              解压安装包
+#cd redis-2.8.20                          进入redis文件
+#make PREFIX=/usr/local/redis install     安装目录
+#mkdir /usr/local/redis/etc               创建文件
+#cp redis.conf /usr/local/redis/etc/      复制配置文件
+
+编辑redis.conf文件   把daemonize no改成daemonize yes    守护进程方式再后台运行
+
+启动：1./usr/local/redis/bin/redis-server
+      2./usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf   //读配置文件启动
+
+
+redis连接工具：/usr/local/redis/bin/redis-cli
+查看进程：ps aux | grep redis
+
+
+
+安装phpredis扩展
+
+1、上传phpredis-2.2.4.tar.gz到/usr/local/src目录
+2、cd /usr/local/src #进入软件包存放目录
+3、tar zxvf phpredis-2.2.4.tar.gz #解压
+4、cd phpredis-2.2.4 #进入安装目录
+5、/usr/bin/phpize #用phpize生成configure配置文件（找到phpize所在目录，可用find / -name phpize 搜索）
+6、./configure --with-php-config=/usr/bin/php-config  #配置（用find / -name php-config 搜索到php-config所在目录）  
+7、make && make install  //编译+安装 
+8、配置php支持：vim /etc/php.ini   #用find / -name php.ini搜索php.ini文件所在位置
+9、打开php.ini：vim /etc/php.ini 
+10、extension="redis.so"   #在最后一行添加
+11、重启服务 service httpd restart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

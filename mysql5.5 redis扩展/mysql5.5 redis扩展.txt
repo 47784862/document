@@ -1,0 +1,3 @@
+http://www.cnblogs.com/SQL888/p/5753134.html  //yum安装mysql5.5
+
+http://www.jb51.net/article/99775.htm         //redis扩展安装
